@@ -6,8 +6,8 @@ class PointValue extends Component {
      } 
     render() { 
         return (
-            <div>
-                <button>{this.props.value}</button>
+            <div className='btn-group'>
+                <button className='btn btn-success btn-lg'>{this.props.value}</button>
             </div>
         );
     }
