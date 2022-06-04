@@ -15,7 +15,6 @@ class Points extends Component {
     
         return (
             <div>
-                <h1>Championship Tracker</h1>
                 {this.state.points.map(points => (
                     <PointValue key={points.id} value={points.value} id={points.id} />
                 ))}

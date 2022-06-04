@@ -6,8 +6,8 @@ class PointValue extends Component {
      } 
 
      handleClick = product => {
-         this.setState({ value: this.state.value});
-         console.log(this.state.value)
+         this.setState({ value: this.state.value + this.props.value});
+         console.log()
      }
     render() { 
         return (
@@ -15,13 +15,13 @@ class PointValue extends Component {
                 <button className='btn btn-success btn-lg' onClick={() => this.handleClick()}>
                     {this.props.value}
                 </button>
-                <span className={this.trackPoints()}>{}</span>
+                <span className={this.trackPoints()}>{this.formatCount}</span>
             </div>
         );
     }
 
     trackPoints() {
-        let goal = "badge"
+        let goal = "badge m-2 badge-";
         goal += (this.state.value === 15) ? "warning" : "primary";
         return goal;
     }
