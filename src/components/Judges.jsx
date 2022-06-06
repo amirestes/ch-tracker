@@ -7,7 +7,7 @@ class Judges extends Component {
      } 
     render() { 
         return (
-            <div>
+            <div className='judge'>
                 <input type="text" placeholder="Judge's name" />
             </div>
         );

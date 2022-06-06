@@ -11,8 +11,8 @@ class PointValue extends Component {
      }
     render() { 
         return (
-            <div className='btn-group button'>
-                <button className='btn btn-dark btn-lg' onClick={() => this.handleClick()}>
+            <div className='btn button'>
+                <button className='btn btn-outline-dark btn-lg' onClick={() => this.handleClick()}>
                     {this.props.value}
                 </button>
                 <span className={this.trackPoints()}>{this.formatCount}</span>

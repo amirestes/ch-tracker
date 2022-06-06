@@ -6,6 +6,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: radial-gradient(circle, gold 0%, purple 75%);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding-top: 10em;
 }
 
 code {
@@ -14,7 +18,7 @@ code {
 }
 
 .tracker {
-  margin: 45px auto;
+  margin: 25px auto;
   max-width: 70%;
   padding: 25px;
 }
@@ -22,4 +26,12 @@ code {
 .button {
   margin: 45px auto;
   padding: 10px;
+}
+
+.dog, .judge {
+  margin-bottom: 1em;
+}
+
+.dog h3 {
+  margin-bottom: 1em;
 }
