@@ -8,3 +8,8 @@ Click the number of points awarded for the day.
 Display current number of points.
 
 Update progress bar with conditional statement.
+
+Originally tried to start as a React.js app, but decided to start over using JavaScript.
+\*Why did I decide to start over? Realized I was overcomplicating it and confusing myself.
+
+Will refactor in React when done.
