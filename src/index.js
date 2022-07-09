@@ -1,8 +1,9 @@
 import "./styles.css";
 
 document.getElementById("app").innerHTML = `
-<h1>Championship Tracker</h1>
-                <h3>Dog's Name</h3>
+            <div>
+              <h1>Championship Tracker</h1>
+                <h3 class="dog">Dog's Name</h3>
                 <input type="text" 
                 placeholder="Dog's Call Name" />
             </div>
@@ -23,8 +24,14 @@ document.getElementById("app").innerHTML = `
                   5
                 </button>
                 <span>15</span>
-                <div class="progress">
-  <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-</div>
+                <div class="tracker">
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-striped bg-info" 
+                    role="progressbar" style="width: 75%" 
+                    aria-valuenow="75" aria-valuemin="0" 
+                    aria-valuemax="100">
+                    </div>
+                    </div>
+                </div>
             </div>
 `;
