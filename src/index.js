@@ -1,25 +1,18 @@
-var buttonOne = document.querySelector("#one");
-var buttonTwo = document.querySelector("#two");
-var buttonThree = document.querySelector("#three");
-var buttonFour = document.querySelector("#four");
-var buttonFive = document.querySelector("#five");
-
+//Points Count and Button click event function
+const pointsValue = document.getElementById("points");
 let points = 0;
+pointsValue.innerHTML = points;
 
-var congrats = function (points) {
-  if (points === 15) {
-    console.log("CONGRATULATIONS ON YOUR NEW CHAMPION!!!");
-  }
+const increasePoints = (value) => {
+  points = points + value;
+  pointsValue.innerHTML = points;
 };
 
-congrats(points);
+//Progress Bar
+//progress bar change class for 5 points
+const progressUpdate = () => { 
+  
+};
 
-buttonOne.addEventListener("click", function () {});
-
-buttonTwo.addEventListener("click", function () {});
-
-buttonThree.addEventListener("click", function () {});
-
-buttonFour.addEventListener("click", function () {});
-
-buttonFive.addEventListener("click", function () {});
+//progress bar change class for 10 points
+//progress bar change class for 15 points

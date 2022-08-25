@@ -20,24 +20,42 @@
         <h3 class="dog">Dog's Name</h3>
         <input type="text" placeholder="Dog's Call Name" />
       </div>
-      <div class="btn button">
-        <button id="one" class="btn btn-outline-dark btn-lg">
+      <div class="button">
+        <!-- btn button -->
+        <button 
+          id="one" 
+          class="btn btn-outline-dark btn-lg"
+          onclick="increasePoints(1)"
+          >
           1
         </button>
-        <button id="two" class="btn btn-outline-dark btn-lg">
+        <button 
+          id="two" 
+          class="btn btn-outline-dark btn-lg"
+          onclick="increasePoints(2)"
+          >
           2
         </button>
-        <button id="three" class="btn btn-outline-dark btn-lg">
+        <button 
+          id="three" 
+          onclick="increasePoints(3)"
+          class="btn btn-outline-dark btn-lg">
           3
         </button>
-        <button id="four" class="btn btn-outline-dark btn-lg">
+        <button 
+          id="four" 
+          onclick="increasePoints(4)"
+          class="btn btn-outline-dark btn-lg">
           4
         </button>
-        <button id="five" class="btn btn-outline-dark btn-lg">
+        <button 
+          id="five" 
+          onclick="increasePoints(5)"
+          class="btn btn-outline-dark btn-lg">
           5
         </button>
         <br>
-        <span id="points" class="newCh">15</span>
+        <span id="points" class="newCh"></span>
         <h3></h3>
         <div class="tracker">
           <div class="progress">
