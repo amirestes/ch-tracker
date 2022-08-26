@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Parcel Sandbox</title>
+    <title>Championship Tracker</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
@@ -56,13 +56,19 @@
         </button>
         <br>
         <span id="points" class="newCh"></span>
-        <h3></h3>
+        <h3 id="h3"></h3>
+        <!-- <button 
+        class="test"
+        onclick="progressChange()">
+          test
+        </button> -->
         <div class="tracker">
           <div class="progress">
             <div
+              id="percentLoaded"
               class="progress-bar progress-bar-striped bg-info"
               role="progressbar"
-              style="width: 75%;"
+              style="width: 100%;"
               aria-valuenow="75"
               aria-valuemin="0"
               aria-valuemax="100"
