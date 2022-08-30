@@ -2,12 +2,12 @@
 const pointsValue = document.getElementById("points");
 let points = 0;
 pointsValue.textContent = points;
-
+//Print points to span
 const increasePoints = (value) => {
   points = points + value;
   pointsValue.textContent = points;
 };
-
+//Resets points to 0 and prints 0
 const reset = () => {
   pointsValue.textContent = 0;
   points = 0;
