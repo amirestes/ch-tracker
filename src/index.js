@@ -6,8 +6,8 @@ pointsValue.textContent = points;
 const increasePoints = (value) => {
   points = points + value;
   pointsValue.textContent = points;
+  //Prints banner when 15 points is reached
   if (points >= 15) {
-    // console.log("new champion");
     const banner = document.getElementById("h3");
     banner.textContent = "CONGRATULATIONS ON YOUR NEW CHAMPION!!!";
   }
