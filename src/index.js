@@ -6,22 +6,18 @@ pointsValue.textContent = points;
 const increasePoints = (value) => {
   points = points + value;
   pointsValue.textContent = points;
+  if (points >= 15) {
+    // console.log("new champion");
+    const banner = document.getElementById("h3");
+    banner.textContent = "CONGRATULATIONS ON YOUR NEW CHAMPION!!!";
+  }
 };
+
 //Resets points to 0 and prints 0
 const reset = () => {
   pointsValue.textContent = 0;
   points = 0;
 };
-
-// const progressChange = () => {
-//   if (points === 5) {
-//     //banner works when I used it with an onclick event and a button, but not working when I put in a conditional
-//     const banner = document.querySelectorAll("h3");
-//     banner.innerText = "Hello!!!";
-//   }
-// };
-
-// progressChange();
 
 // const progressBarUpdater = document.getElementById("progressbar").value;
 // console.log("test button clicked");
