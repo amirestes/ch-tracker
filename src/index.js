@@ -11,18 +11,21 @@ const name = () => {
 //Points Count and Button click event function
 let points = 0;
 pointsValue.textContent = points;
+let majorCount = 0;
 
 //Print points to span
 const increasePoints = (value) => {
   points = points + value;
   pointsValue.textContent = points;
   progressBarUpdater(points);
-  if (value >= 3) {
-    major.textContent = "Major win!";
-  }
-  //Prints banner when 15 points is reached
-  if (points >= 15) {
+  //Prints banner when 15 points with at least 2 majors is reached
+  if (points >= 15 && majorCount >= 2) {
     banner.textContent = "CONGRATULATIONS ON YOUR NEW CHAMPION!!!";
+  }
+  //Prints number of majors won
+  if (value >= 3) {
+    majorCount += 1;
+    major.textContent = majorCount + " major wins";
   }
 };
 
