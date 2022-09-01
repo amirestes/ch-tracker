@@ -35,6 +35,7 @@ const reset = () => {
   points = 0;
   banner.textContent = "";
   progressBarData.style = "width: 0%;";
+  majorCount = 0;
   major.textContent = "";
 };
 
