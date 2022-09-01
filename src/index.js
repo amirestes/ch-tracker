@@ -1,6 +1,7 @@
 const banner = document.getElementById("h3");
 const pointsValue = document.getElementById("points");
 const progressBarData = document.getElementById("percentLoaded");
+const major = document.getElementById("major");
 
 //A function to add placeholder for dog's name
 const name = () => {
@@ -16,6 +17,9 @@ const increasePoints = (value) => {
   points = points + value;
   pointsValue.textContent = points;
   progressBarUpdater(points);
+  if (value >= 3) {
+    major.textContent = "Major win!";
+  }
   //Prints banner when 15 points is reached
   if (points >= 15) {
     banner.textContent = "CONGRATULATIONS ON YOUR NEW CHAMPION!!!";
@@ -28,6 +32,7 @@ const reset = () => {
   points = 0;
   banner.textContent = "";
   progressBarData.style = "width: 0%;";
+  major.textContent = "";
 };
 
 //Controls progress bar changes
