@@ -6,6 +6,8 @@ Enter judge's name and print in a list
 
 Click the number of points awarded for the day.
 Display current number of points.
+Tracks number of majors won.
+Confirmation message with 15 points with 2 major wins entered.
 
 Update progress bar with conditional statement.
 
