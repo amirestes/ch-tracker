@@ -2,16 +2,25 @@ const banner = document.getElementById("h3");
 const pointsValue = document.getElementById("points");
 const progressBarData = document.getElementById("percentLoaded");
 const major = document.getElementById("major");
-
-//A function to add placeholder for dog's name
-const name = () => {
-  const nameArray = []; //create empty array
-};
-
-//Points Count and Button click event function
+const addDogName = document.querySelector("#submit");
+const nameInput = document.querySelector("input");
 let points = 0;
 pointsValue.textContent = points;
 let majorCount = 0;
+
+//A function to add dog's name
+addDogName.addEventListener("click", () => {
+  const name = nameInput.value;
+  if (name !== "") {
+    const listName = document.querySelector(".dog");
+    listName.textContent += " " + name;
+    clearInput();
+  }
+});
+
+const clearInput = () => {
+  nameInput.value = "";
+};
 
 //Print points to span
 const increasePoints = (value) => {
