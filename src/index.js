@@ -4,6 +4,8 @@ const progressBarData = document.getElementById("percentLoaded");
 const major = document.getElementById("major");
 const addDogName = document.querySelector("#submit");
 const nameInput = document.querySelector("input");
+const listName = document.querySelector(".dog");
+const name = nameInput.value;
 let points = 0;
 pointsValue.textContent = points;
 let majorCount = 0;
@@ -46,6 +48,7 @@ const reset = () => {
   progressBarData.style = "width: 0%;";
   majorCount = 0;
   major.textContent = "";
+  listName.textContent = "Dog's Name:";
 };
 
 //Controls progress bar changes
