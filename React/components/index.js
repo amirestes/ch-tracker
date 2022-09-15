@@ -1,3 +1,6 @@
+import React from "react";
+import ReactDom from "react-dom/client";
+
 const banner = document.getElementById("h3");
 const pointsValue = document.getElementById("points");
 const progressBarData = document.getElementById("percentLoaded");
@@ -85,3 +88,5 @@ const progressBarUpdater = (points) => {
     progressBarData.style = "width: 100%";
   }
 };
+
+ReactDom.createRoot(document.getElementById("root").render();
