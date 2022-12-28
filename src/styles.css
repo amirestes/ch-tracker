@@ -7,11 +7,11 @@ body {
   padding-top: 10em;
 }
 
-.tracker {
+/* .tracker {
   margin: 25px auto;
   max-width: 70%;
   padding: 25px;
-}
+} */
 
 .button {
   margin: 45px auto;
@@ -30,4 +30,9 @@ body {
 span {
   margin-top: 15px;
   font-size: 5em;
+}
+
+li {
+  list-style-type: none;
+  font-size: 2em;
 }

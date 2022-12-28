@@ -9,17 +9,32 @@ const name = nameInput.value;
 let points = 0;
 pointsValue.textContent = points;
 let majorCount = 0;
+const pastEl = document.getElementById("past-el");
+const pastList = document.getElementById("past-ul");
+let myDogs = [];
+let myPoints = [];
 
 //A function to add dog's name
 addDogName.addEventListener("click", () => {
   const name = nameInput.value;
+  //adds name to myDogs array
+  myDogs.push(name);
   if (name !== "") {
     const listName = document.querySelector(".dog");
     listName.textContent += " " + name;
     clearInput();
+    //Saves name and points to localStorage
+    // localStorage.setItem("name", JSON.stringify(myDogs));
+    // savedList();
   }
 });
 
+//Clears name
+const resetName = () => {
+  listName.textContent = "Dog's Name:";
+};
+
+//Clears the name value
 const clearInput = () => {
   nameInput.value = "";
 };
@@ -28,6 +43,7 @@ const clearInput = () => {
 const increasePoints = (value) => {
   points = points + value;
   pointsValue.textContent = points;
+  // myPoints.push(points);
   progressBarUpdater(points);
   //Prints banner when 15 points with at least 2 majors is reached
   if (points >= 15 && majorCount >= 2) {
@@ -38,8 +54,22 @@ const increasePoints = (value) => {
     majorCount += 1;
     major.textContent = majorCount + " major wins";
   }
+  // localStorage.setItem("points", points);
 };
 
+//localStorage list of past dogs and their points
+// const savedList = () => {
+//   let savedName = JSON.parse(localStorage.getItem("myDogs"));
+//   let savedPoints = localStorage.getItem("points");
+//   myDogs.forEach(
+//     (element) => (pastList.innerHTML = `<li>${myDogs} ${points}</li>`)
+//   );
+// };
+//clear past list
+// const resetList = () => {
+//   pastList.innerHTML = ` `;
+//   localStorage.clear();
+// };
 //Resets points to 0 and prints 0
 const reset = () => {
   pointsValue.textContent = 0;
