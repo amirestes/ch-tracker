@@ -11,24 +11,22 @@ pointsValue.textContent = points;
 let majorCount = 0;
 const pastEl = document.getElementById("past-el");
 const pastList = document.getElementById("past-ul");
-let myDogs = [];
-let myPoints = [];
 
 //A function to add dog's name
 addDogName.addEventListener("click", () => {
   const name = nameInput.value;
-  //adds name to myDogs array
-  myDogs.push(name);
+  localStorage.setItem("name", name);
   if (name !== "") {
     const listName = document.querySelector(".dog");
-    listName.textContent += " " + name;
-    clearInput();
+    listName.innerHTML += " " + localStorage.getItem("name");
   }
+  clearInput();
 });
 
-//Clears name
+//Clears name when reset button is pushed
 const resetName = () => {
   listName.textContent = "Dog's Name:";
+  localStorage.clear("name");
 };
 
 //Clears the name value
@@ -39,8 +37,8 @@ const clearInput = () => {
 //Print points to span
 const increasePoints = (value) => {
   points = points + value;
-  pointsValue.textContent = points;
-  // myPoints.push(points);
+  localStorage.setItem("points", points);
+  pointsValue.innerHTML = localStorage.getItem("points");
   progressBarUpdater(points);
   //Prints banner when 15 points with at least 2 majors is reached
   if (points >= 15 && majorCount >= 2) {
@@ -70,39 +68,5 @@ const reset = () => {
   majorCount = 0;
   major.textContent = "";
   listName.textContent = "Dog's Name:";
+  localStorage.clear();
 };
-
-//Original code to make the progress bar functional
-//as I learned a better way to write less code I replaced this. 
-//const progressBarUpdater = (points) => {
-// if (points === 1) {
-//   progressBarData.style = "width: 7%";
-// } else if (points === 2) {
-//   progressBarData.style = "width: 13%";
-// } else if (points === 3) {
-//   progressBarData.style = "width: 20%";
-// } else if (points === 4) {
-//   progressBarData.style = "width: 27%";
-// } else if (points === 5) {
-//   progressBarData.style = "width: 33%";
-// } else if (points === 6) {
-//   progressBarData.style = "width: 40%";
-// } else if (points === 7) {
-//   progressBarData.style = "width: 47%";
-// } else if (points === 8) {
-//   progressBarData.style = "width: 53%";
-// } else if (points === 9) {
-//   progressBarData.style = "width: 60%";
-// } else if (points === 10) {
-//   progressBarData.style = "width: 66%";
-// } else if (points === 11) {
-//   progressBarData.style = "width: 73%";
-// } else if (points === 12) {
-//   progressBarData.style = "width: 80%";
-// } else if (points === 13) {
-//   progressBarData.style = "width: 87%";
-// } else if (points === 14) {
-//   progressBarData.style = "width: 93%";
-// } else if (points >= 15) {
-//   progressBarData.style = "width: 100%";
-// } };
