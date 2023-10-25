@@ -1,12 +1,22 @@
 body {
   font-family: sans-serif;
-  background-image: radial-gradient(circle, gold 0%, purple 75%);
+  /*background-image: radial-gradient(circle, gold 0%, purple 75%);*/
   display: flex;
-  justify-content: center;
-  align-content: center;
-  padding-top: 10em;
+  justify-content: start;
+  align-content: start;
+  padding-top: 5em;
 }
 
+main {
+  background-color: forestgreen;
+  border-radius: 10px;
+  margin: 0 25px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
 /* .tracker {
   margin: 25px auto;
   max-width: 70%;
