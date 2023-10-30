@@ -1,15 +1,14 @@
 body {
   font-family: sans-serif;
-  /*background-image: radial-gradient(circle, gold 0%, purple 75%);*/
+  background-image: radial-gradient(circle, gold 0%, purple 75%);
   display: flex;
-  justify-content: start;
-  align-content: start;
+  justify-content: center;
+  align-content: center;
   padding-top: 5em;
 }
 
 main {
-  background-color: forestgreen;
-  border-radius: 10px;
+  
   margin: 0 25px;
   padding: 25px;
   display: flex;
@@ -17,15 +16,18 @@ main {
   align-items: center;
   align-content: center;
 }
+
 /* .tracker {
   margin: 25px auto;
   max-width: 70%;
   padding: 25px;
 } */
 
-.button {
+.button,
+.ch {
   margin: 45px auto;
-  padding: 10px;
+  width: 65%;
+  
 }
 
 .dog,
